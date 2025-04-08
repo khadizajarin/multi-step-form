@@ -21,7 +21,7 @@ This project is a **Multi-Step Form** built with **Next.js App Router**, **React
 
 ## 📸 Demo
 
-- 🔗 **Live Site**: [https://your-deploy-link.vercel.app](https://your-deploy-link.vercel.app)
+- 🔗 **Live Site**: [https://y-xi-nine.vercel.app/](https://y-xi-nine.vercel.app/)
 - 🎥 **Video Demo**: [Watch on Loom](https://your-loom-video-link.com)
 
 ---
@@ -59,22 +59,14 @@ cd multi-step-form
 
 ```
 
-2. Install Dependencies
-bash
-Copy
-Edit
+### 2. Install Dependencies
 npm install
-3. Run the Development Server
-bash
-Copy
-Edit
+
+### 3. Run the Development Server
 npm run dev
 Open http://localhost:3000 in your browser to see the app.
 
 📂 Project Structure
-css
-Copy
-Edit
 app/
   ├──components/
     ├── form/
@@ -94,10 +86,5 @@ Each form step uses Zod to validate fields with instant feedback and error messa
 If you have suggestions or want to contribute, feel free to open an issue or a PR!
 
 🧑‍💻 Author
-Built by Your Name
-
-yaml
-Copy
-Edit
-
+Built by Khadiza Jarin Roza
 
