@@ -27,7 +27,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
             {label}
-          </label>
+          </label>  
         )}
         <div className="relative">
           <input
@@ -35,7 +35,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             {...props}
             type={currentInputType}
             className={cn(
-              "w-full rounded-md border border-gray-300 dark:border-gray-600 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+              "w-full rounded-md border border-gray-300 dark:border-gray-600 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3F72AF] focus:border-[#3F72AF] transition-all duration-200",
               error && "border-red-500 focus:ring-red-500 focus:border-red-500",
               className
             )}
