@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 // Step Three schema
 export const stepThreeSchema = z
@@ -41,7 +42,7 @@ export default function StepThree({ defaultValues, onBack, onNext }: Props) {
       <div>
         <label>Username</label>
         <Input {...register('username')} />
-        {errors.username && <p>{errors.username.message}</p>}
+        {errors.username && <p className='text-red-700 mt-1 text-xs'>{errors.username.message}</p>}
       </div>
       <div>
         <label>Password</label>
@@ -50,7 +51,7 @@ export default function StepThree({ defaultValues, onBack, onNext }: Props) {
           {...register('password')}
           showPasswordToggle // Add the toggle feature
         />
-        {errors.password && <p>{errors.password.message}</p>}
+        {errors.password && <p className='text-red-700 mt-1 text-xs'>{errors.password.message}</p>}
       </div>
       <div>
         <label>Confirm Password</label>
@@ -59,11 +60,19 @@ export default function StepThree({ defaultValues, onBack, onNext }: Props) {
           {...register('confirmPassword')}
           showPasswordToggle // Add the toggle feature
         />
-        {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
+        {errors.confirmPassword && <p className='text-red-700 mt-1 text-xs'>{errors.confirmPassword.message}</p>}
       </div>
       <div className='flex space-x-4'>
-        <Button type="button" onClick={onBack}>Back</Button>
-        <Button type="submit">Next</Button>
+        <Button type="button" onClick={onBack} className="flex items-center gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back
+        </Button>
+
+        <Button type="submit" className="flex items-center gap-2">
+            Next
+            <ArrowRight className="w-4 h-4" />
+    </Button>
+
       </div>
     </form>
   );

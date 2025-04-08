@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
+import { ArrowRight } from "lucide-react";
 
 // Define the schema for Step 1
 export const stepOneSchema = z.object({
@@ -37,19 +38,23 @@ export default function StepOne({ onNext, defaultValues }: Props) {
             <div>
                 <label>Full Name</label>
                 <Input {...register('fullName')} />
-                {errors.fullName && <p>{errors.fullName.message}</p>}
+                {errors.fullName && <p className='text-red-700 mt-1 text-xs'>{errors.fullName.message}</p>}
             </div>
             <div>
                 <label>Email</label>
                 <Input {...register('email')} />
-                {errors.email && <p>{errors.email.message}</p>}
+                {errors.email && <p className='text-red-700 mt-1 text-xs'>{errors.email.message}</p>}
             </div>
             <div>
                 <label>Phone</label>
                 <Input {...register('phone')} />
-                {errors.phone && <p>{errors.phone.message}</p>}
+                {errors.phone && <p className='text-red-700 mt-1 text-xs'>{errors.phone.message}</p>}
             </div>
-            <Button type="submit" >Next</Button>
+            <Button type="submit" className="flex items-center gap-2">
+                Next
+                <ArrowRight className="w-4 h-4" />
+            </Button>
+
         </form>
     </div>
    

@@ -7,7 +7,13 @@ module.exports = {
   ],
   darkMode: 'class', // Enables class-based dark mode
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#3F72AF",
+        secondary: "#3B82F6", // or any hex code
+        // Add more if needed
+      },
+    },
   },
   plugins: [],
 };

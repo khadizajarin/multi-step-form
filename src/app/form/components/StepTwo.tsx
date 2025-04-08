@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Step Two schema
 export const stepTwoSchema = z.object({
@@ -40,21 +41,29 @@ export default function StepTwo({ defaultValues, onNext, onBack }: Props) {
       <div>
         <label>Street Address</label>
         <Input {...register('street')} />
-        {errors.street && <p>{errors.street.message}</p>}
+        {errors.street && <p className='text-red-700 mt-1 text-xs'>{errors.street.message}</p>}
       </div>
       <div>
         <label>City</label>
         <Input {...register('city')} />
-        {errors.city && <p>{errors.city.message}</p>}
+        {errors.city && <p className='text-red-700 mt-1 text-xs'>{errors.city.message}</p>}
       </div>
       <div>
         <label>Zip Code</label>
         <Input {...register('zip')} />
-        {errors.zip && <p>{errors.zip.message}</p>}
+        {errors.zip && <p className='text-red-700 mt-1 text-xs'>{errors.zip.message}</p>}
       </div>
       <div className='flex space-x-4'>
-        <Button type="button" onClick={onBack}>Back</Button>
-        <Button type="submit">Next</Button>
+        <Button type="button" onClick={onBack} className="flex items-center gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back
+        </Button>
+
+        <Button type="submit" className="flex items-center gap-2">
+            Next
+            <ArrowRight className="w-4 h-4" />
+        </Button>
+
       </div>
     </form>
   );

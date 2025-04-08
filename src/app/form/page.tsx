@@ -8,6 +8,8 @@ import { StepOneData } from './components/StepOne';
 import { StepTwoData } from './components/StepTwo';
 import { StepThreeData } from './components/StepThree';
 import Button from './ui/Button';
+import { Sun, Moon } from "lucide-react";
+
 
 export default function FormPage() {
   const [step, setStep] = useState(1);
@@ -57,14 +59,16 @@ export default function FormPage() {
 }
 
   return (
-    <div className="max-w-xl mx-auto px-4 pt-4 w-full bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors rounded-lg">
+    <div className="max-w-xl mx-auto px-4 pt-4 w-full bg-[#DBE2EF] dark:bg-gray-900 text-black dark:text-white h-[90vh] transition-colors rounded-lg">
       {/* Dark Mode Toggle */}
       <Button
-        className="p-2 rounded bg-blue-500 text-white dark:bg-gray-700 dark:text-white mb-4"
+        className="p-2 rounded mb-4 flex items-center gap-2"
         onClick={toggleDarkMode}
-      >
+        >
+        {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
         Toggle Dark Mode
-      </Button>
+        </Button>
+
 
       {step === 1 && <StepOne onNext={nextStep} defaultValues={formData} />}
       {step === 2 && <StepTwo onNext={nextStep} onBack={prevStep} defaultValues={formData} />}

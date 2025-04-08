@@ -70,11 +70,11 @@ npm run dev
 ```
 Open http://localhost:3000 in your browser to see the app.
 
-📂 Project Structure
+### 📂 Project Structure
 ```bash
 app/
-  ├──components/
-    ├── form/
+  ├──form/
+    ├── components/
     │   ├── Step1.tsx
     │   ├── Step2.tsx
     │   ├── Step3.tsx
@@ -85,12 +85,12 @@ app/
     │   └── Button.tsx
     ├── page.tsx
 ```
-🧪 Validation with Zod
+### 🧪 Validation with Zod
 Each form step uses Zod to validate fields with instant feedback and error messages shown under inputs.
 
-💬 Feedback
+### 💬 Feedback
 If you have suggestions or want to contribute, feel free to open an issue or a PR!
 
-🧑‍💻 Author
+### 🧑‍💻 Author
 Built by Khadiza Jarin Roza
 
