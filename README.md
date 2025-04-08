@@ -54,7 +54,7 @@ This project is a **Multi-Step Form** built with **Next.js App Router**, **React
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/multi-step-form.git
+git clone https://github.com/khadizajarin/multi-step-form
 cd multi-step-form
 
 ```
@@ -71,6 +71,7 @@ npm run dev
 Open http://localhost:3000 in your browser to see the app.
 
 📂 Project Structure
+```bash
 app/
   ├──components/
     ├── form/
@@ -83,6 +84,7 @@ app/
     │   └── Input.tsx
     │   └── Button.tsx
     ├── page.tsx
+```
 🧪 Validation with Zod
 Each form step uses Zod to validate fields with instant feedback and error messages shown under inputs.
 
