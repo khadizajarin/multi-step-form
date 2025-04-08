@@ -60,10 +60,14 @@ cd multi-step-form
 ```
 
 ### 2. Install Dependencies
+```bash
 npm install
+```
 
 ### 3. Run the Development Server
+```bash
 npm run dev
+```
 Open http://localhost:3000 in your browser to see the app.
 
 📂 Project Structure
