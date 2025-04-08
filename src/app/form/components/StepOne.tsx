@@ -4,6 +4,8 @@
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import Button from '../ui/Button';
+import Input from '../ui/Input';
 
 // Define the schema for Step 1
 export const stepOneSchema = z.object({
@@ -34,20 +36,20 @@ export default function StepOne({ onNext, defaultValues }: Props) {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
             <div>
                 <label>Full Name</label>
-                <input {...register('fullName')} />
+                <Input {...register('fullName')} />
                 {errors.fullName && <p>{errors.fullName.message}</p>}
             </div>
             <div>
                 <label>Email</label>
-                <input {...register('email')} />
+                <Input {...register('email')} />
                 {errors.email && <p>{errors.email.message}</p>}
             </div>
             <div>
                 <label>Phone</label>
-                <input {...register('phone')} />
+                <Input {...register('phone')} />
                 {errors.phone && <p>{errors.phone.message}</p>}
             </div>
-            <button type="submit">Next</button>
+            <Button type="submit" >Next</Button>
         </form>
     </div>
    

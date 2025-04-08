@@ -4,6 +4,8 @@
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import Input from '../ui/Input';
+import Button from '../ui/Button';
 
 // Step Two schema
 export const stepTwoSchema = z.object({
@@ -37,22 +39,22 @@ export default function StepTwo({ defaultValues, onNext, onBack }: Props) {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
       <div>
         <label>Street Address</label>
-        <input {...register('street')} />
+        <Input {...register('street')} />
         {errors.street && <p>{errors.street.message}</p>}
       </div>
       <div>
         <label>City</label>
-        <input {...register('city')} />
+        <Input {...register('city')} />
         {errors.city && <p>{errors.city.message}</p>}
       </div>
       <div>
         <label>Zip Code</label>
-        <input {...register('zip')} />
+        <Input {...register('zip')} />
         {errors.zip && <p>{errors.zip.message}</p>}
       </div>
-      <div>
-        <button type="button" onClick={onBack}>Back</button>
-        <button type="submit">Next</button>
+      <div className='flex space-x-4'>
+        <Button type="button" onClick={onBack}>Back</Button>
+        <Button type="submit">Next</Button>
       </div>
     </form>
   );

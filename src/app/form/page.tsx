@@ -7,6 +7,7 @@ import FormSummary from './components/FormSummary';
 import { StepOneData } from './components/StepOne';
 import { StepTwoData } from './components/StepTwo';
 import { StepThreeData } from './components/StepThree';
+import Button from './ui/Button';
 
 export default function FormPage() {
   const [step, setStep] = useState(1);
@@ -56,14 +57,14 @@ export default function FormPage() {
 }
 
   return (
-    <div className="max-w-xl mx-auto p-4 bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors">
+    <div className="max-w-xl mx-auto px-4 pt-4 w-full bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors rounded-lg">
       {/* Dark Mode Toggle */}
-      <button
+      <Button
         className="p-2 rounded bg-blue-500 text-white dark:bg-gray-700 dark:text-white mb-4"
         onClick={toggleDarkMode}
       >
         Toggle Dark Mode
-      </button>
+      </Button>
 
       {step === 1 && <StepOne onNext={nextStep} defaultValues={formData} />}
       {step === 2 && <StepTwo onNext={nextStep} onBack={prevStep} defaultValues={formData} />}

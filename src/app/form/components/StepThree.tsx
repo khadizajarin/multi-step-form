@@ -1,9 +1,10 @@
-// /form/stepThree.tsx
 'use client';
 
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import Input from '../ui/Input';
+import Button from '../ui/Button';
 
 // Step Three schema
 export const stepThreeSchema = z
@@ -39,22 +40,30 @@ export default function StepThree({ defaultValues, onBack, onNext }: Props) {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
       <div>
         <label>Username</label>
-        <input {...register('username')} />
+        <Input {...register('username')} />
         {errors.username && <p>{errors.username.message}</p>}
       </div>
       <div>
         <label>Password</label>
-        <input type="password" {...register('password')} />
+        <Input
+          type="password"
+          {...register('password')}
+          showPasswordToggle // Add the toggle feature
+        />
         {errors.password && <p>{errors.password.message}</p>}
       </div>
       <div>
         <label>Confirm Password</label>
-        <input type="password" {...register('confirmPassword')} />
+        <Input
+          type="password"
+          {...register('confirmPassword')}
+          showPasswordToggle // Add the toggle feature
+        />
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
       </div>
-      <div>
-        <button type="button" onClick={onBack}>Back</button>
-        <button type="submit">Next</button>
+      <div className='flex space-x-4'>
+        <Button type="button" onClick={onBack}>Back</Button>
+        <Button type="submit">Next</Button>
       </div>
     </form>
   );

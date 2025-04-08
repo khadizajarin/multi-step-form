@@ -3,7 +3,7 @@ import FormPage from "./form/page";
 
 export default function Home() {
   return (
-    <div className="bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-lg">
+    <div className="bg-white dark:bg-gray-800 text-black dark:text-white p-4 ">
       <FormPage></FormPage>
       </div>
   );
