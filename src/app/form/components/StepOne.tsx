@@ -30,23 +30,26 @@ export default function StepOne({ onNext, defaultValues }: Props) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
-      <div>
-        <label>Full Name</label>
-        <input {...register('fullName')} />
-        {errors.fullName && <p>{errors.fullName.message}</p>}
-      </div>
-      <div>
-        <label>Email</label>
-        <input {...register('email')} />
-        {errors.email && <p>{errors.email.message}</p>}
-      </div>
-      <div>
-        <label>Phone</label>
-        <input {...register('phone')} />
-        {errors.phone && <p>{errors.phone.message}</p>}
-      </div>
-      <button type="submit">Next</button>
-    </form>
+    <div className=''>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
+            <div>
+                <label>Full Name</label>
+                <input {...register('fullName')} />
+                {errors.fullName && <p>{errors.fullName.message}</p>}
+            </div>
+            <div>
+                <label>Email</label>
+                <input {...register('email')} />
+                {errors.email && <p>{errors.email.message}</p>}
+            </div>
+            <div>
+                <label>Phone</label>
+                <input {...register('phone')} />
+                {errors.phone && <p>{errors.phone.message}</p>}
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+   
   );
 }

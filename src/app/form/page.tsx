@@ -51,10 +51,12 @@ export default function FormPage() {
   };
 
   // Toggle dark mode state
-  const toggleDarkMode = () => setDarkMode(prev => !prev);
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
+}
 
   return (
-    <div className="max-w-xl mx-auto p-4">
+    <div className="max-w-xl mx-auto p-4 bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors">
       {/* Dark Mode Toggle */}
       <button
         className="p-2 rounded bg-blue-500 text-white dark:bg-gray-700 dark:text-white mb-4"
